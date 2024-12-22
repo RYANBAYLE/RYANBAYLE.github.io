@@ -6,31 +6,45 @@
 }
 
 body {
+  position: relative;
   height: 100vh;
   overflow: hidden;
-}
-
-.game {
-  position: relative;
-  border: 1px solid black;
-  width: 600px;
-  height: 600px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-.game .player_1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgb(114, 108, 103);
+}
+
+.game {
+  position: relative;
+  border: 5px solid gold;
+  border-top: 5px solid silver;
+  border-right: 5px solid silver;
+  -webkit-box-shadow: 0px 3px 3px 1px #262424;
+          box-shadow: 0px 3px 3px 1px #262424;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 30px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  overflow: hidden;
+}
+.game .player_1 {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
-  height: 50%;
-  background: yellow;
+  height: 200px;
+  background: rgb(255, 217, 0);
 }
 .game .player_1 #rouge {
   position: relative;
@@ -38,7 +52,15 @@ body {
   height: 50px;
   background: red;
   border-radius: 50%;
-  margin: 50px;
+  margin: 50px 30px;
+}
+.game .player_1 #rouge:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0 0 6px 2px rgba(255, 87, 34, 0.8588235294);
+          box-shadow: 0 0 6px 2px rgba(255, 87, 34, 0.8588235294);
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 .game .player_1 #bleu {
   position: relative;
@@ -46,15 +68,31 @@ body {
   height: 50px;
   background: blue;
   border-radius: 50%;
-  margin: 50px;
+  margin: 50px 30px;
+}
+.game .player_1 #bleu:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0 0 6px 2px rgba(34, 203, 255, 0.8588235294);
+          box-shadow: 0 0 6px 2px rgba(34, 203, 255, 0.8588235294);
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 .game .player_1 #vert {
   width: 50px;
   height: 50px;
   background: green;
   border-radius: 50%;
-  margin: 50px;
+  margin: 50px 30px;
   position: relative;
+}
+.game .player_1 #vert:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0 0 6px 2px rgba(122, 255, 33, 0.8588235294);
+          box-shadow: 0 0 6px 2px rgba(122, 255, 33, 0.8588235294);
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 .game .player_1 img {
   position: absolute;
@@ -64,29 +102,44 @@ body {
           transform: translate(-50%, -50%);
   height: 30px;
 }
-.game .score {
+.game #scoreCounter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  text-align: center;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  opacity: 0;
   text-align: center;
 }
+.game #countdown {
+  position: absolute;
+  top: 55%;
+  left: 45%;
+  -webkit-transform: translate(-45%, -45%) rotate(45deg);
+          transform: translate(-45%, -45%) rotate(45deg);
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  opacity: 0;
+}
 .game .machine {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
-  height: 50%;
-  background: black;
+  height: 200px;
+  background: silver;
 }
 .game .machine #rougeMachine {
   width: 50px;
   height: 50px;
   background: red;
   border-radius: 50%;
-  margin: 50px;
+  margin: 50px 30px;
   opacity: 0;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
@@ -97,7 +150,7 @@ body {
   height: 50px;
   background: blue;
   border-radius: 50%;
-  margin: 50px;
+  margin: 50px 30px;
   opacity: 0;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
@@ -108,7 +161,7 @@ body {
   height: 50px;
   background: green;
   border-radius: 50%;
-  margin: 50px;
+  margin: 50px 30px;
   opacity: 0;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
@@ -145,6 +198,56 @@ body {
   opacity: 0;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
-  font-size: 10rem;
+  font-size: 7rem;
   color: pink;
+}
+
+#rejouer {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  padding: 5px;
+  text-transform: uppercase;
+  background: black;
+  color: white;
+}
+#rejouer:hover {
+  -webkit-transform: translate(-50%) scale(1.1);
+          transform: translate(-50%) scale(1.1);
+  background: rgba(0, 0, 0, 0.534);
+  border-radius: 10px;
+}
+
+#Perso-machine {
+  position: absolute;
+  bottom: 10%;
+  right: 20%;
+  height: 200px;
+  -webkit-box-shadow: 0 0 17px 0px #ef0b0b;
+          box-shadow: 0 0 17px 0px #ef0b0b;
+  border: 1px solid black;
+}
+
+#Perso-player {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  height: 200px;
+  -webkit-box-shadow: 0 0 17px 0px #0b1aef;
+          box-shadow: 0 0 17px 0px #0b1aef;
+  border: 1px solid black;
+}
+
+.rules {
+  position: absolute;
+  right: 5%;
+  bottom: 30%;
+  background: white;
+  font-size: 0.9rem;
+  width: 17%;
+  border-radius: 20px 20px 20px 0;
+  border: 3px solid black;
+  padding: 5px;
 }/*# sourceMappingURL=style.css.map */
