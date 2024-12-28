@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/style/style.css" />
   </head>
   <body>
+    <h1 class="Nom">The Machine's Game</h1>
     <div class="game">
       <div class="player_1">
         <div id="rouge">
@@ -38,12 +39,25 @@
         </div>
       </div>
 
-      <span id="finish"> FINISH </span>
+      <span id="win"> Champion! </span>
+      <span id="loose"> C'est moi le plus fort!</span>
     </div>
     <button id="rejouer">Défier M.Machine à nouveau</button>
-    <img id="Perso-machine" src="./assets/images/machine.png" alt="" />
+    <div class="Machine-card">
+      <img id="Perso-machine" src="./assets/images/machine.png" alt="" />
+      <h3>La Machine</h3>
+    </div>
     <img id="Perso-player" src="./assets/images/player 1.png" alt="" />
-
+    <form class="Player-card">
+      <h3 id="name-edited">Player-1</h3>
+      <input
+        type="text"
+        id="player-name"
+        placeholder="C'est quoi ton Nom?"
+        maxlength="9"
+      />
+    </form>
+    <button id="changer-nom">Je m'appelle autrement</button>
     <div class="rules">
       <p>
         Coucou! Moi c'est La... Machine... Monsieur La Machine! Et t'as aucune
@@ -53,6 +67,13 @@
       </p>
     </div>
 
+    <div class="palmarès-morpions">
+      <button id="palmarès">Plamarès des Morpions</button>
+      <div class="palmarès-window">
+        <h2>Morpions to Champions</h2>
+        <ul id="palmarès-list"></ul>
+      </div>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>
