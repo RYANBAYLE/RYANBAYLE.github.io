@@ -1,0 +1,87 @@
+#morpion-girl {
+  position: absolute;
+  top: 47.5%;
+  left: 19.5%;
+  border-radius: 15px;
+  width: 180px;
+  padding: 10px;
+  font-size: 0.7rem;
+  background: black;
+  color: white;
+  transition: 0.2s ease;
+  &:hover {
+    transform: scale(0.9);
+    background: rgba(0, 0, 0, 0.534);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+#morpion-boy {
+  position: absolute;
+  top: 47.5%;
+  left: 19.5%;
+  border-radius: 15px;
+  width: 180px;
+  padding: 10px;
+  font-size: 0.7rem;
+  background: black;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease;
+  &:hover {
+    transform: scale(0.9);
+    background: rgba(0, 0, 0, 0.534);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+#Perso-player-fille {
+  position: absolute;
+  top: 17%;
+  left: 19.3%;
+  height: 150px;
+  box-shadow: 0 0 17px 0px #0b1aef;
+  border: 1px solid black;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease;
+}
+#Perso-player {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  height: 200px;
+  box-shadow: 0 0 17px 0px #0b1aef;
+  border: 1px solid black;
+}
+
+.Player-card {
+  position: absolute;
+  top: 38%;
+  left: 20%;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+#changer-nom {
+  position: absolute;
+  top: 43%;
+  left: 19%;
+  display: none;
+  padding: 5px;
+  text-transform: uppercase;
+  background: black;
+  color: white;
+  transform: scale(0.8);
+  &:hover {
+    transform: scale(0.9);
+    background: rgba(0, 0, 0, 0.534);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}

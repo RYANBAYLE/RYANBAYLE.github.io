@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="!">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document</title>
+
+    <link rel="stylesheet" href="./assets/style/style.css" />
+  </head>
+  <body>
+    <h1 id="title">The Yuyien's game</h1>
+    <div class="main-img">
+      <img id="Yuyien" src="./assets/images/Yuyien.png" alt="" />
+      <div id="rules">
+        <h2>Sayut moi c'est Yuyien et ye vais te yire comment youer!</h2>
+        <ul>
+          <li>1. Désignez 1 Maître Yu</li>
+          <li>
+            2. Désignez 2 Yiens.<br />
+            Ce seront les Yien-Yiens du jeu.
+          </li>
+          <li>
+            3. Le Maître Yu choisit un mot pour chacun des Yiens puis montre son
+            mot à son Yien. Les Yien-Yiens doivent le garder précieusement pour
+            eux.
+          </li>
+          <li>4. Maître Yu choisit un mot de départ qui sera connu de tous.</li>
+          <li>
+            5. La partie commence. Le Yien ayant gagné le pile ou face joue en
+            premier.
+          </li>
+          <li>
+            6. Les Yiens doivent, chacun leur tour, dire un mot en rapport avec
+            le mot qui a été dit précédemment. Au premier tour c'est le mot
+            choisit par le Maître Yu vaut comme mot précédent.
+          </li>
+          <li>
+            7. Il est interdit de dire un mot qui a déjà été dit. Si un Yien
+            fait cette erreur son tour prend fin.
+          </li>
+          <li>
+            But du Jeu: Pour gagner la partie il faut que le mot précédent
+            puisse permettre à un Yien de dire son mot à haute voix.
+          </li>
+          <li>
+            Remarque: Le maître Yu est le seul juge. Il peut refuser la validité
+            d'un mot s'il lui semble trop éloigné du mot précédent.
+          </li>
+          <li>
+            IMPORTANT: Le Yien voulant dire son mot-secret à haute voix doit
+            impérativement avoir l'autorisation du Maître Yu. S'il ne l'a pas,
+            il prend le risque que le Maître Yu ne le valide pas, et donc, de
+            prendre la partie.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="Yien-left">
+      <form class="Yien-one">
+        <h3 id="Yien-name-left">Yien-1</h3>
+        <input
+          type="text"
+          id="input-name-left"
+          placeholder="C'est quoi ton Nom?"
+          maxlength="9"
+        />
+        <button
+          type="submit"
+          id="submit-form-one"
+          style="display: none"
+        ></button>
+      </form>
+
+      <button id="changer-nom-left">Je m'appelle autrement</button>
+    </div>
+    <div class="mot-form-left">
+      <form class="mot-one">
+        <h3 id="mot-one-left">Mot-Secret</h3>
+        <input
+          type="text"
+          id="input-mot-left"
+          placeholder="Mot du Yien"
+          maxlength="9"
+        />
+        <button
+          type="submit"
+          id="submit-form-Yien-one"
+          style="display: none"
+        ></button>
+      </form>
+
+      <button id="changer-mot-left">Changer le mot</button>
+    </div>
+    <div class="Yien-right">
+      <form class="Yien-two">
+        <h3 id="Yien-name-right">Yien-2</h3>
+        <input
+          type="text"
+          id="input-name-right"
+          placeholder="C'est quoi ton Nom?"
+          maxlength="9"
+        />
+        <button
+          type="submit"
+          id="submit-form-one"
+          style="display: none"
+        ></button>
+      </form>
+
+      <button id="changer-nom-right">Je m'appelle autrement</button>
+    </div>
+    <div class="mot-form-right">
+      <form class="mot-two">
+        <h3 id="mot-two-right">Mot-Secret</h3>
+        <input
+          type="text"
+          id="input-mot-right"
+          placeholder="Mot du Yien"
+          maxlength="9"
+        />
+        <button
+          type="submit"
+          id="submit-form-Yien-one"
+          style="display: none"
+        ></button>
+      </form>
+
+      <button id="changer-mot-right">Changer le mot</button>
+    </div>
+    <div class="Maitre-Yu">
+      <form class="Maitre-Yu-one">
+        <h3 id="Yu-name">Maître-Yu</h3>
+        <input
+          type="text"
+          id="input-Yu"
+          placeholder="C'est quoi ton Nom?"
+          maxlength="9"
+        />
+        <button type="submit" id="submit-form" style="display: none">
+          valider
+        </button>
+      </form>
+
+      <button id="changer-nom-Yu">Je m'appelle autrement</button>
+    </div>
+    <div class="mot-Yu">
+      <form class="Maitre-Yu-mot">
+        <h3 id="Yu-mot">Le mot du Maître</h3>
+        <input
+          type="text"
+          id="input-Yu-mot"
+          placeholder="Premier Mot"
+          maxlength="9"
+        />
+        <button type="submit" id="submit-form" style="display: none">
+          valider
+        </button>
+      </form>
+
+      <button id="changer-mot-Yu">Le Maître décide d'un autre mot</button>
+    </div>
+
+    <form class="nouveau-mot-form">
+      <input
+        type="text"
+        id="nouveau-mot-input"
+        placeholder="Ajouter le nouveau mot à la liste"
+      />
+    </form>
+    <div class="mots-list">
+      <select name="list-view" id="list-view">
+        <option value="">Mots déjà dit</option>
+      </select>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

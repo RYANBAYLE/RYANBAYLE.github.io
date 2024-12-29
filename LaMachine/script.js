@@ -201,3 +201,33 @@ palmarèsButton.addEventListener("click", () => {
 });
 
 saveMorpionList();
+
+// boy or girl
+
+const morpionGirl = document.getElementById("morpion-girl");
+const morpionBoy = document.getElementById("morpion-boy");
+const imgGirl = document.getElementById("Perso-player-fille");
+const imgBoy = document.getElementById("Perso-player");
+
+morpionGirl.addEventListener("click", () => {
+  morpionGirl.style.visibility = "hidden";
+  morpionGirl.style.opacity = "0";
+  morpionBoy.style.visibility = "visible";
+  morpionBoy.style.opacity = "1";
+
+  imgGirl.style.visibility = "visible";
+  imgGirl.style.opacity = "1";
+  imgBoy.style.visibility = "hidden";
+  imgBoy.style.opacity = "0";
+});
+morpionBoy.addEventListener("click", () => {
+  morpionGirl.style.visibility = "visible";
+  morpionGirl.style.opacity = "1";
+  morpionBoy.style.visibility = "hidden";
+  morpionBoy.style.opacity = "0";
+
+  imgGirl.style.visibility = "hidden";
+  imgGirl.style.opacity = "0";
+  imgBoy.style.visibility = "visible";
+  imgBoy.style.opacity = "1";
+});
