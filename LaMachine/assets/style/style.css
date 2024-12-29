@@ -23,6 +23,12 @@ body {
   background: rgb(114, 108, 103);
 }
 
+#Yuyien {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .game {
   position: relative;
   border: 5px solid gold;
