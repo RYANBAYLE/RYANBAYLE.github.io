@@ -1,0 +1,133 @@
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+// body {
+//   background: rgb(28, 100, 141);
+//   position: relative;
+//   height: 100vh;
+//   overflow: hidden;
+// }
+
+// .title {
+//   position: absolute;
+//   top: 25%;
+//   left: 50%;
+//   transform: translate(-50%, -25%);
+//   display: flex;
+//   flex-direction: column;
+//   h1 {
+//     text-transform: uppercase;
+//     margin: 0;
+//   }
+// }
+// .gameDisplay {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-around;
+//   margin-top: 300px;
+//   //   position: absolute;
+//   //   top: 50%;
+//   //   left: 50%;
+//   //   transform: translate(-50%, -50%);
+//   #MachineGame {
+//     img {
+//       height: 100px;
+//     }
+//   }
+// }
+// #YGame {
+//   img {
+//     height: 100px;
+//   }
+// }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(28, 100, 141);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.title {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  h1 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 5rem;
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  &:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+.gameDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 300px;
+
+  img {
+    margin-left: 15%;
+    height: 100px;
+    width: 70%;
+  }
+  #MachineGame {
+    padding: 5px;
+    border-radius: 5px;
+    &:hover {
+      scale: 1.1;
+      box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.63);
+      background: rgb(28, 92, 25);
+    }
+  }
+  #YGame {
+    padding: 5px;
+    border-radius: 5px;
+    &:hover {
+      scale: 1.1;
+      box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.63);
+      background: rgb(28, 92, 25);
+    }
+  }
+  #todolist {
+    padding: 5px;
+    border-radius: 5px;
+    &:hover {
+      scale: 1.1;
+      box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.63);
+      background: rgb(28, 92, 25);
+    }
+  }
+  #chrono {
+    padding: 5px;
+    border-radius: 5px;
+    &:hover {
+      scale: 1.1;
+      box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.63);
+      background: rgb(28, 92, 25);
+    }
+  }
+  #mdp {
+    padding: 5px;
+    border-radius: 5px;
+
+    &:hover {
+      scale: 1.1;
+      box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.63);
+      background: rgb(28, 92, 25);
+    }
+  }
+}

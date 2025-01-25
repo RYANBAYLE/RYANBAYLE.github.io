@@ -1,0 +1,1 @@
+MachineGame.addEventlistener("click", () => {});

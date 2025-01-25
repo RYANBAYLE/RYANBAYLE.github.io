@@ -13,17 +13,6 @@ const machineColors = [rougeMachine, bleuMachine, vertMachine];
 const countdownElement = document.getElementById("countdown");
 let score = 0;
 
-// save classement
-
-function storeMorpion() {
-  window.localStorage.morpionsList += palmarèsList.innerHTML;
-}
-function saveMorpionList() {
-  if (window.localStorage.morpionsList) {
-    palmarèsList.innerHTML += window.localStorage.morpionsList;
-  }
-}
-
 P1.addEventListener("click", (e) => {
   // Trouver la div parente avec l'ID (si elle existe)
   const element = e.target.closest("div");
@@ -101,6 +90,16 @@ P1.addEventListener("click", (e) => {
       score;
     }
 
+    // save classement
+
+    function storeMorpion() {
+      window.localStorage.morpionsList += palmarèsList.innerHTML;
+    }
+    function saveMorpionList() {
+      if (window.localStorage.morpionsList) {
+        palmarèsList.innerHTML += window.localStorage.morpionsList;
+      }
+    }
     // Vérifier les conditions de fin de jeu
     if (score === 2) {
       win.style.visibility = "visible";
