@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "number";
+  src: url(../fonts/ChronoType.otf);
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(../images/camouflage-1541188_1280.jpg) center/cover;
+  text-align: center;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 6rem;
+  margin-top: 100px;
+  color: rgb(123, 191, 103);
+  text-transform: uppercase;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 10%;
+  margin: 0 auto;
+}
+form #choice {
+  margin-top: 20px;
+  height: 30px;
+  border-style: none;
+}
+form #start {
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 20px 10px;
+  width: 67%;
+  background: rgb(40, 80, 116);
+  color: azure;
+}
+form #start:hover {
+  scale: 0.9;
+  background: yellowgreen;
+}
+
+.chrono {
+  margin: 0 auto;
+  margin-top: 100px;
+  height: 250px;
+  width: 16%;
+  border: 5px solid black;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgb(123, 191, 103);
+}
+.chrono #countdownDisplay {
+  font-size: 4rem;
+  font-family: "number";
+}
+
+#army {
+  height: 770px;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  translate: -50%;
+  opacity: 0.2;
+  z-index: -1;
+}/*# sourceMappingURL=style.css.map */

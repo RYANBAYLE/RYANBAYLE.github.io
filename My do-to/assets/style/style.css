@@ -1,0 +1,134 @@
+@font-face {
+  font-family: "todo";
+  src: url(../fonts/VIRUST.ttf);
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  text-align: center;
+  background: url(../images/universe-5427747_1280.jpg) center/cover;
+}
+
+h1 {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-family: "todo";
+  font-size: 3rem;
+  color: bisque;
+}
+
+h2 {
+  position: absolute;
+  top: 20px;
+  left: 60px;
+  width: 450px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: bisque;
+}
+
+#note {
+  outline: none;
+  margin-top: 30px;
+  color: white;
+  background: rgb(0, 0, 0);
+  border-radius: 5px;
+  border: 3px solid white;
+  width: 350px;
+  height: 40px;
+}
+#note::-webkit-input-placeholder {
+  color: white;
+  padding: 10px;
+}
+#note::-moz-placeholder {
+  color: white;
+  padding: 10px;
+}
+#note:-ms-input-placeholder {
+  color: white;
+  padding: 10px;
+}
+#note::-ms-input-placeholder {
+  color: white;
+  padding: 10px;
+}
+#note::placeholder {
+  color: white;
+  padding: 10px;
+}
+#note:hover {
+  -webkit-filter: brightness(150%);
+          filter: brightness(150%);
+  border: 3px solid black;
+}
+#note:focus {
+  border: 3px dashed white;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.366);
+  position: relative;
+  -webkit-box-shadow: 0 0 9px 1px black;
+          box-shadow: 0 0 9px 1px black;
+  border-radius: 10px;
+  width: 90%;
+  min-height: 600px;
+  margin: 0 auto;
+}
+.container #items {
+  display: grid;
+  justify-items: center;
+  grid-template-rows: 200px;
+  grid-template-columns: repeat(5, 200px);
+  gap: 15px;
+  width: 80%;
+  margin: 20px auto;
+  padding: 15px;
+}
+.container #items li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-shadow: 0 0 6px 1px black;
+          box-shadow: 0 0 6px 1px black;
+  list-style: none;
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  font-size: 1.4rem;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-y: scroll;
+  position: relative;
+}
+.container #items li::-webkit-scrollbar {
+  width: 2px;
+}
+.container #items li:hover {
+  -webkit-filter: brightness(150%);
+          filter: brightness(150%);
+  scale: 1.03;
+}
+.container #items .checked {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3) !important;
+  text-decoration: line-through;
+  color: white;
+}/*# sourceMappingURL=style.css.map */
