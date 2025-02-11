@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(./assets/images/forest-4365198_1280.jpg) center/cover,
+    no-repeat;
+  overflow: hidden;
+}
+.container {
+  text-align: center;
+  background: rgba(231, 169, 169, 0.408);
+  box-shadow: 0px 0px 8px rgb(255 250 250);
+  padding: 50px;
+  border-radius: 10px;
+}
+h1 {
+  text-transform: uppercase;
+}
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.options {
+  margin: 10px 0;
+}
+.range-container {
+  display: flex;
+  margin-top: 15px;
+}
+#password-length {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  width: 160px;
+  height: 0px;
+  background-image: linear-gradient(120deg, #5f7728 0%, #96e6a1 100%);
+  border-radius: 50px;
+  margin-top: 5px;
+}
+#password-length::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 0;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+#password-length::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 23px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.65) 0%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+  /* background-blend-mode: multiply, multiply; */
+  border-radius: 18px;
+  transform: translateY(-11px);
+  transition: 0.15s ease;
+  cursor: grab;
+}
+#password-length::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  transform: scale(1.2) translateY(-9px);
+}
+#display-password-length {
+  background: transparent;
+  width: 15px;
+  text-align: center;
+  border: none;
+}
+.checkbox-container {
+  display: flex;
+  margin-top: 15px;
+}
+.checkbox-container input {
+  display: none;
+}
+input[type="checkbox"]:checked + label {
+  transform: scale(1.1);
+  filter: brightness(150%);
+  border-radius: 10px;
+  box-shadow: 0 0 8px #5f7728;
+}
+.checkbox-container label {
+  user-select: none;
+  transition: 0.2s ease;
+  width: 60px;
+  height: 60px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  margin: 5px auto;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.562);
+  box-shadow: 0 0 8px #772828;
+}
+button {
+  background: #5f7728;
+  text-transform: uppercase;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+}
+button:hover {
+  background: #772828;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}

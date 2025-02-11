@@ -1,0 +1,148 @@
+@font-face {
+  font-family: "pop";
+  src: url(../fonts/Loli\ Pop.ttf);
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  cursor: crosshair;
+  background: rgb(109, 44, 44);
+}
+
+h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  font-family: "pop";
+  scale: 1;
+}
+
+#kid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-47%, -80%);
+          transform: translate(-47%, -80%);
+  z-index: -1;
+  height: 400px;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+  -webkit-transition: 0.8s linear;
+  transition: 0.8s linear;
+  -webkit-animation: anim 7s forwards;
+          animation: anim 7s forwards;
+}
+
+.soap {
+  position: absolute;
+  background: url(../images/shampoo-4015072_640.png) center/contain no-repeat;
+  -webkit-animation: animS 4s forwards;
+          animation: animS 4s forwards;
+}
+
+.bubbleTea {
+  position: absolute;
+  background: url(../images/milk-tea-6005310_640.png) center/contain no-repeat;
+  -webkit-animation: animT 6s forwards;
+          animation: animT 6s forwards;
+}
+
+.fish {
+  position: absolute;
+  background: url(../images/blowfish-2027755_1280.png) center/contain no-repeat;
+  -webkit-animation: animF 4s forwards;
+          animation: animF 4s forwards;
+}
+
+@-webkit-keyframes anim {
+  to {
+    top: -250px;
+    left: var(--left);
+    opacity: 0.5;
+    -webkit-filter: hue-rotate(720deg);
+            filter: hue-rotate(720deg);
+  }
+}
+
+@keyframes anim {
+  to {
+    top: -250px;
+    left: var(--left);
+    opacity: 0.5;
+    -webkit-filter: hue-rotate(720deg);
+            filter: hue-rotate(720deg);
+  }
+}
+@-webkit-keyframes animS {
+  to {
+    top: -250px;
+    left: var(--left);
+    opacity: 1;
+    -webkit-filter: hue-rotate(720deg);
+            filter: hue-rotate(720deg);
+  }
+}
+@keyframes animS {
+  to {
+    top: -250px;
+    left: var(--left);
+    opacity: 1;
+    -webkit-filter: hue-rotate(720deg);
+            filter: hue-rotate(720deg);
+  }
+}
+@-webkit-keyframes animT {
+  to {
+    top: -250px;
+    left: var(--left);
+    opacity: 1;
+    -webkit-filter: hue-rotate(720deg);
+            filter: hue-rotate(720deg);
+  }
+}
+@keyframes animT {
+  to {
+    top: -250px;
+    left: var(--left);
+    opacity: 1;
+    -webkit-filter: hue-rotate(720deg);
+            filter: hue-rotate(720deg);
+  }
+}
+@-webkit-keyframes animF {
+  to {
+    top: -250px;
+    left: var(--left);
+    opacity: 1;
+    -webkit-filter: hue-rotate(720deg);
+            filter: hue-rotate(720deg);
+  }
+}
+@keyframes animF {
+  to {
+    top: -250px;
+    left: var(--left);
+    opacity: 1;
+    -webkit-filter: hue-rotate(720deg);
+            filter: hue-rotate(720deg);
+  }
+}/*# sourceMappingURL=style.css.map */
