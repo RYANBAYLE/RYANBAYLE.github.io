@@ -32,6 +32,32 @@ h1 {
   scale: 1;
 }
 
+#start {
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  height: 75px;
+  width: 100px;
+  padding: 10px;
+  padding-bottom: 15px;
+  scale: 1.5;
+  font-family: "pop";
+  border-radius: 30px;
+  -webkit-clip-path: polygon(93% 20%, 84% 46%, 93% 69%, 53% 61%, 12% 71%, 18% 44%, 8% 25%, 53% 27%);
+          clip-path: polygon(93% 20%, 84% 46%, 93% 69%, 53% 61%, 12% 71%, 18% 44%, 8% 25%, 53% 27%);
+  background: rgb(255, 255, 255);
+  background: radial-gradient(circle, rgb(237, 251, 63) 0%, rgb(245, 4, 4) 100%);
+  cursor: pointer;
+  -webkit-box-shadow: inset 8px 8px 20px 8px rgba(0, 0, 0, 0.631372549);
+          box-shadow: inset 8px 8px 20px 8px rgba(0, 0, 0, 0.631372549);
+}
+#start:hover {
+  background: rgb(255, 255, 255);
+  background: radial-gradient(circle, rgb(245, 4, 4) 0%, rgb(237, 251, 63) 100%);
+}
+
 #kid {
   position: absolute;
   top: 50%;
@@ -145,4 +171,27 @@ h1 {
     -webkit-filter: hue-rotate(720deg);
             filter: hue-rotate(720deg);
   }
+}
+#text {
+  position: absolute;
+  top: 20%;
+  left: 65%;
+  width: 300px;
+  translate: -50% -30%;
+  font-family: "pop";
+  font-size: 1rem;
+  background: rgba(243, 143, 160, 0.67);
+  padding: 10px;
+  border-radius: 15px 15px 15px 0;
+  border: 2px solid black;
+}
+
+#finish {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  translate: -50% -30%;
+  font-family: "pop";
+  font-size: 10rem;
+  opacity: 0;
 }/*# sourceMappingURL=style.css.map */

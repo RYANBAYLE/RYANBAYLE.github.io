@@ -124,35 +124,37 @@ function startIntervals() {
     bubbleInterval = setInterval(bubbleMaker, 200);
     soapInterval = setInterval(soapMaker, 2000);
     teaInterval = setInterval(teaMaker, 1000);
+    fishInterval = setInterval(fishMaker, 750);
   } else if (counter > 20 && counter <= 30) {
     // Correction ici
     clearIntervals();
     bubbleInterval = setInterval(bubbleMaker, 200);
-    soapInterval = setInterval(soapMaker, 3000);
-    teaInterval = setInterval(teaMaker, 2000);
-    fishInterval = setInterval(fishMaker, 500);
+    soapInterval = setInterval(soapMaker, 2000);
+    teaInterval = setInterval(teaMaker, 1000);
+    fishInterval = setInterval(fishMaker, 300);
   } else if (counter > 30 && counter <= 40) {
     // Correction ici
     clearIntervals();
     bubbleInterval = setInterval(bubbleMaker, 200);
     soapInterval = setInterval(soapMaker, 3000);
-    teaInterval = setInterval(teaMaker, 2000);
-    fishInterval = setInterval(fishMaker, 200);
+    teaInterval = setInterval(teaMaker, 1000);
+    fishInterval = setInterval(fishMaker, 150);
   } else if (counter > 40 && counter <= 50) {
     // Correction ici
     clearIntervals();
     bubbleInterval = setInterval(bubbleMaker, 200);
     soapInterval = setInterval(soapMaker, 5000);
-    teaInterval = setInterval(teaMaker, 3000);
-    fishInterval = setInterval(fishMaker, 100);
-  } else if (counter > 50 && counter <= 60) {
+    teaInterval = setInterval(teaMaker, 2000);
+    fishInterval = setInterval(fishMaker, 75);
+  } else if (counter > 50 && counter <= 59) {
     // Correction ici
     clearIntervals();
-    bubbleInterval = setInterval(bubbleMaker, 300);
+    bubbleInterval = setInterval(bubbleMaker, 200);
     soapInterval = setInterval(soapMaker, 5000);
-    teaInterval = setInterval(teaMaker, 3000);
-    fishInterval = setInterval(fishMaker, 200);
+    teaInterval = setInterval(teaMaker, 750);
+    fishInterval = setInterval(fishMaker, 50);
   } else {
+    document.getElementById("finish").style.opacity = "1";
     clearIntervals();
   }
 }
@@ -163,4 +165,8 @@ function clearIntervals() {
   clearInterval(teaInterval);
   clearInterval(fishInterval);
 }
-startIntervals();
+document.getElementById("start").addEventListener("click", () => {
+  startIntervals();
+  document.getElementById("start").style.display = "none";
+  document.getElementById("text").style.display = "none";
+});

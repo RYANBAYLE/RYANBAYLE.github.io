@@ -1,0 +1,65 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f2b9;
+}
+h1 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.calculator {
+  width: 300px;
+  background: rgb(111, 136, 218);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 6px 7px 1px 6px rgba(0, 0, 0, 0.877);
+}
+
+.display {
+  font-size: 2em;
+  text-align: right;
+  padding: 10px;
+  background: #beb764bd;
+  box-shadow: inset 5px 5px 0 0 black;
+  color: black;
+  border-radius: 5px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "clear back divide multiply"
+    "seven eight nine subtract"
+    "four five six add"
+    "one two three equals"
+    "zero zero decimal equals";
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 20px;
+  font-size: 1.2em;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 4px 5px 0px 6px black;
+  transition: 0.2s ease-in-out;
+}
+
+.btn[style*="grid-area: zero;"] {
+  grid-column: span 2;
+}
+
+.btn:hover {
+  background: #b7b6b6;
+  //   box-shadow: inset 2px 1px 3px 2px black;
+  box-shadow: 0 0 0px 3px black;
+  transform: translateX(4px) translateY(4px);
+}
