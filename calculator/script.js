@@ -3,53 +3,51 @@ class Calculator {
     this.currentValue = "";
     this.operator = null;
     this.previousValue = "";
+    this.expression = "";
+    this.displayElement = document.getElementById("display");
   }
 
   appendNumber(number) {
-    this.currentValue += number;
+    if (this.currentValue === "0" && number !== ".") {
+      this.currentValue = number;
+    } else {
+      this.currentValue += number;
+    }
+    this.expression += number;
     this.updateDisplay();
   }
 
   chooseOperator(operator) {
-    if (this.currentValue === "") return;
-    if (this.previousValue !== "") {
-      this.compute();
+    if (this.currentValue === "" && this.previousValue === "") return;
+    if (this.currentValue === "" && this.operator) {
+      this.expression = this.expression.slice(0, -1) + operator;
+    } else {
+      this.previousValue = this.currentValue;
+      this.currentValue = "";
+      this.expression += ` ${operator} `;
     }
     this.operator = operator;
-    this.previousValue = this.currentValue;
-    this.currentValue = "";
     this.updateDisplay();
   }
 
   compute() {
-    let computation;
-    const prev = parseFloat(this.previousValue);
-    const current = parseFloat(this.currentValue);
-    if (isNaN(prev) || isNaN(current)) return;
-    switch (this.operator) {
-      case "+":
-        computation = prev + current;
-        break;
-      case "-":
-        computation = prev - current;
-        break;
-      case "*":
-        computation = prev * current;
-        break;
-      case "/":
-        computation = prev / current;
-        break;
-      default:
-        return;
+    try {
+      this.currentValue = eval(this.expression).toString();
+      this.expression = this.currentValue;
+      this.operator = null;
+      this.previousValue = "";
+      this.updateDisplay();
+    } catch (error) {
+      this.currentValue = "Erreur";
+      this.updateDisplay();
     }
-    this.currentValue = computation.toString();
-    this.operator = null;
-    this.previousValue = "";
-    this.updateDisplay();
   }
 
   deleteLastDigit() {
-    this.currentValue = this.currentValue.slice(0, -1);
+    if (this.currentValue.length > 0) {
+      this.currentValue = this.currentValue.slice(0, -1);
+      this.expression = this.expression.slice(0, -1);
+    }
     this.updateDisplay();
   }
 
@@ -57,18 +55,12 @@ class Calculator {
     this.currentValue = "";
     this.operator = null;
     this.previousValue = "";
+    this.expression = "";
     this.updateDisplay();
   }
 
-  // Mise à jour de l'affichage pour inclure l'opération en cours
   updateDisplay() {
-    if (this.operator) {
-      document.getElementById(
-        "display"
-      ).textContent = `${this.previousValue} ${this.operator} ${this.currentValue}`;
-    } else {
-      document.getElementById("display").textContent = this.currentValue || "0";
-    }
+    this.displayElement.innerText = this.expression || "0";
   }
 }
 

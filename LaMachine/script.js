@@ -209,24 +209,33 @@ const imgGirl = document.getElementById("Perso-player-fille");
 const imgBoy = document.getElementById("Perso-player");
 
 morpionGirl.addEventListener("click", () => {
-  morpionGirl.style.visibility = "hidden";
-  morpionGirl.style.opacity = "0";
+  console.log("Changement en fille");
+  morpionGirl.style.display = "none";
+  morpionBoy.style.display = "block";
   morpionBoy.style.visibility = "visible";
   morpionBoy.style.opacity = "1";
 
+  imgGirl.style.display = "block";
   imgGirl.style.visibility = "visible";
   imgGirl.style.opacity = "1";
+  imgBoy.style.display = "none";
   imgBoy.style.visibility = "hidden";
   imgBoy.style.opacity = "0";
 });
+
 morpionBoy.addEventListener("click", () => {
+  console.log("Changement en garçon");
+  morpionGirl.style.display = "block";
   morpionGirl.style.visibility = "visible";
   morpionGirl.style.opacity = "1";
+  morpionBoy.style.display = "none";
   morpionBoy.style.visibility = "hidden";
   morpionBoy.style.opacity = "0";
 
+  imgGirl.style.display = "none";
   imgGirl.style.visibility = "hidden";
   imgGirl.style.opacity = "0";
+  imgBoy.style.display = "block";
   imgBoy.style.visibility = "visible";
   imgBoy.style.opacity = "1";
 });

@@ -116,44 +116,47 @@ function startIntervals() {
   if (counter <= 10) {
     clearIntervals(); // Arrête les anciens intervalles
     bubbleInterval = setInterval(bubbleMaker, 100);
-    soapInterval = setInterval(soapMaker, 2000);
+    soapInterval = setInterval(soapMaker, 1000);
     teaInterval = setInterval(teaMaker, 500);
   } else if (counter > 10 && counter <= 20) {
-    // Correction ici
+    document.getElementById("lvl").textContent = "lvl 2";
     clearIntervals();
     bubbleInterval = setInterval(bubbleMaker, 200);
     soapInterval = setInterval(soapMaker, 2000);
     teaInterval = setInterval(teaMaker, 1000);
     fishInterval = setInterval(fishMaker, 750);
   } else if (counter > 20 && counter <= 30) {
-    // Correction ici
+    document.getElementById("lvl").textContent = "lvl 3";
     clearIntervals();
     bubbleInterval = setInterval(bubbleMaker, 200);
     soapInterval = setInterval(soapMaker, 2000);
     teaInterval = setInterval(teaMaker, 1000);
     fishInterval = setInterval(fishMaker, 300);
   } else if (counter > 30 && counter <= 40) {
-    // Correction ici
+    document.getElementById("lvl").textContent = "lvl 4";
     clearIntervals();
     bubbleInterval = setInterval(bubbleMaker, 200);
-    soapInterval = setInterval(soapMaker, 3000);
+    soapInterval = setInterval(soapMaker, 2000);
     teaInterval = setInterval(teaMaker, 1000);
     fishInterval = setInterval(fishMaker, 150);
   } else if (counter > 40 && counter <= 50) {
-    // Correction ici
+    document.getElementById("lvl").textContent = "lvl 5";
     clearIntervals();
     bubbleInterval = setInterval(bubbleMaker, 200);
-    soapInterval = setInterval(soapMaker, 5000);
+    soapInterval = setInterval(soapMaker, 3000);
     teaInterval = setInterval(teaMaker, 2000);
     fishInterval = setInterval(fishMaker, 75);
   } else if (counter > 50 && counter <= 59) {
-    // Correction ici
+    document.getElementById("lvl").textContent = "lvl 6";
     clearIntervals();
     bubbleInterval = setInterval(bubbleMaker, 200);
-    soapInterval = setInterval(soapMaker, 5000);
+    soapInterval = setInterval(soapMaker, 4000);
     teaInterval = setInterval(teaMaker, 750);
     fishInterval = setInterval(fishMaker, 50);
   } else {
+    document.getElementById("lvl").textContent = "WINNER";
+    document.getElementById("lvl").style.width = "100px";
+
     document.getElementById("finish").style.opacity = "1";
     clearIntervals();
   }
@@ -169,4 +172,5 @@ document.getElementById("start").addEventListener("click", () => {
   startIntervals();
   document.getElementById("start").style.display = "none";
   document.getElementById("text").style.display = "none";
+  document.getElementById("lvl").style.opacity = "1";
 });

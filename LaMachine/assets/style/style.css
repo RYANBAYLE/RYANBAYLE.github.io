@@ -320,6 +320,7 @@ body {
   opacity: 0;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
+  display: none;
 }
 #morpion-boy:hover {
   -webkit-transform: scale(0.9);
@@ -341,6 +342,7 @@ body {
   opacity: 0;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
+  display: none;
 }
 
 #Perso-player {

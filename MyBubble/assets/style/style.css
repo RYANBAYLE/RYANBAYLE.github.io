@@ -32,6 +32,23 @@ h1 {
   scale: 1;
 }
 
+#lvl {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: "pop";
+  font-size: 1rem;
+  color: yellow;
+  border: 2px solid yellow;
+  width: 75px;
+  opacity: 0;
+  text-align: center;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
 #start {
   border: none;
   position: absolute;
